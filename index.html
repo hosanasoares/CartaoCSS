@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css">
+    <title>Cartão de Visita</title>
+    
+    <header>
+    <style>
+
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #EAEDED;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .giroCartao {
+            width: 500px;
+            height: 300px;
+            perspective: 1000px; 
+        }
+
+        #box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin-left: -100px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+
+        .giroCartao:hover #box {
+            transform: rotateX(180deg); 
+        }
+
+        .frente, .verso {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; 
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .frente {
+            background: rgb(185,226,252);
+            background: linear-gradient(90deg, rgba(185,226,252,1) 0%, rgba(2,88,128,1) 100%);  
+        }
+
+        .verso {
+            
+            color: white;
+            background: rgb(135,172,196);
+            background: linear-gradient(90deg, rgba(135,172,196,1) 0%, rgba(2,88,128,1) 40%); 
+            transform: rotateX(180deg); 
+        }
+
+        .img-moldura{
+            width: 190px; 
+            height: 190px; 
+            border-radius: 50%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-bottom: -110px;
+            margin: -10px;
+            margin-top: 10px;
+            margin-left: -15px;
+            
+        }
+
+        .img {
+            width: 125px;
+            height: 115px;
+            border-radius: 50%;
+            border: 2px solid #8affdaed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -155px;
+            margin-left: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #113939;
+        }
+
+        .profissao {
+            font-size: 16px;
+            margin: 3px 0;
+            font-family:'Times New Roman', Times, serif;
+            color: #004447;
+        }
+
+       
+
+
+        
+        .github-container{
+            position: relative;
+            margin: 0px;
+            width: 100px;
+            height: 95px;
+        
+            
+        }
+
+        .github{
+            width: 150px;
+            height: 150px;
+            margin-top: -65px;
+            margin-left: -55px;
+            top: -500px;
+         
+        }
+
+       
+        .github-text{
+            position: relative;
+            top: -36px;
+            left: -15px;
+            color: rgb(185,226,252);
+            font-size: 13px;
+       }
+
+        .email-container{
+            margin: 0px;
+            width: 65px;
+            height: 70px;
+            position: relative;
+            
+        }
+
+        .email{
+            margin: 0px;
+            width: 100px;
+            height: 97px;
+            top: -150px;
+            left: 90px;
+            position: relative;
+        }
+
+        .email-text{
+            position: relative;
+            top: -154px;
+            left: 75px;
+            color: rgb(185,226,252);
+            font-size: 10px;
+        }
+
+        .insta-container{
+            margin: 0px;
+            width: 65px;
+            height: 70px;
+            position: relative;
+            
+        }
+
+
+       .insta{
+            margin: 0px;
+            width: 113px;
+            height: 110px;
+            top: -238px;
+            left: 208px;
+            position: relative;
+            
+             
+        }
+
+        .insta-text{
+            position: relative;
+            top: -258px;
+            left: 225px;
+            color: rgb(185,226,252);
+            font-size: 13px;
+            
+        }
+
+
+        .telefone-container{
+            margin: 0px;
+            width: 65px;
+            height: 70px;
+            position: relative;
+            
+        }
+
+
+       .telefone{
+            margin: 0px;
+            width: 113px;
+            height: 110px;
+            top: -330px;
+            left: 330px;
+            position: relative;
+        }
+
+        .telefone-text{
+            position: relative;
+            top: -342px;
+            left: 348px;
+            color: rgb(185,226,252);
+            font-size: 12px;
+        }
+
+        .borda{
+            position: relative;
+            margin: 0px;
+            margin-top: 0px;
+            width: 495px;
+            height: 294px;
+            top: 185px;
+            opacity: 0.2;
+
+        }
+
+
+        
+        .rodape{
+            position: relative;
+            margin: 0px;
+           margin-top: 400px;
+           margin-left: -450px;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            
+        }
+        
+        
+        .github:hover, .email:hover, .insta:hover, .telefone:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</header>
+</head>
+<body>
+   
+<main>
+
+<div class="giroCartao"> 
+
+    <div id="box">
+
+        <div class="frente"> 
+            <figure>
+                <img src="img/moldura2.png" class="img-moldura">
+                <img src="img/nana_banana.jpeg" class="img" alt="Foto de Hosana Soares">   
+            </figure>
+
+            <h2>Hosana Clara de Brito Soares Bezerra</h2>
+           <footer> <p class="profissao">Desenvolvedora Web</p></footer>
+           
+            
+        </div>  
+        
+        <div class="verso">
+        <aside>
+        <nav>  
+
+            <div class="borda-container">
+                <img class="borda" src="img/borda.png">
+            </div>
+
+            <div class="github-container">
+                <figure>
+                <a href="https://github.com/hosanasoares">
+                <img class="github" src="img/github.png" >
+                </a>
+                <p class="github-text">hosanasoares</p>
+                </figure>
+            </div>
+            
+            
+            <div class="email-container" >
+                <figure>
+                <a href="mailto:hosana.clara@aluno.ifce.edu.br">
+                <img class="email" src="img/email.png" >
+               </a>
+                <p class="email-text">hosana.clara@aluno.ifce.edu.br</p>
+                </figure>
+                </div>
+
+
+                
+                <div class="insta-container" >
+                    <figure>
+              
+                   <a href="https://www.instagram.com/hosanaasoaress/" target="_blank">
+                    <img class="insta" src="img/instagram.png" >
+                </a>
+                    <p class="insta-text" >hosanaasoaress</p>
+                    </figure>
+                    </div>
+
+                    
+                    <div class="telefone-container" >
+                        <figure>
+                        <a href="tel: +5585989746540">
+                        <img class="telefone" src="img/telefone.png">
+                        </a>
+                        <p class="telefone-text">(85)989746540</p>
+                        
+                        </figure>
+                        
+                        </div>
+                        
+                 </nav>
+                </aside>
+        </div>
+
+    </div>
+</div>
+</main>
+
+<footer class="rodape">Obs: Passe o mouse por cima do cartão.<br>&copy; Hosana Soares, 2024. Direitos reservados.</footer>
+
+
+</body>
+</html>
